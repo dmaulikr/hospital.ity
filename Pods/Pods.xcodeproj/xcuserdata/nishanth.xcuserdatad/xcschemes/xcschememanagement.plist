@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BFOAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CloudSight.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Sports_Travel_Meet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RequestUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Wit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>16A9500B0C179DA4F371BC4AC064E738</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E9C8915DAF22DA1C52CB43F505B4EEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C884FF1021DAFA1DF050290FB2C50BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF941962E5DDC3BE50822536113FCB5F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC133B12170877E6FBF6934073A66D6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

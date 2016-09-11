@@ -1,0 +1,1 @@
+../../../CloudSight/CloudSight/CloudSightQueryDelegate.h

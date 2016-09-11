@@ -1,0 +1,19 @@
+PODS:
+  - BFOAuth (1.0.1)
+  - CloudSight (1.0.3):
+    - BFOAuth (~> 1.0)
+    - RequestUtils (~> 1.1)
+  - RequestUtils (1.1.2)
+  - Wit (4.1.0)
+
+DEPENDENCIES:
+  - CloudSight (~> 1.0)
+  - Wit (~> 4.1.0)
+
+SPEC CHECKSUMS:
+  BFOAuth: e3c2e4eaae862a89bc301ed6f292d3cd0d6a107b
+  CloudSight: 7974bacb22ec2db1bfb0f0242d9be7f442a78d77
+  RequestUtils: 0f04f89abca3936c6566e2f4c3ce5d252036bc89
+  Wit: c00af597e168d45b00109993bb378ce86456c346
+
+COCOAPODS: 0.39.0

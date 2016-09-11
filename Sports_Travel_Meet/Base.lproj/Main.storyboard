@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N92-r3-FFH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="C57-7q-GNJ">
+            <objects>
+                <navigationController id="N92-r3-FFH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vpg-bj-boO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xkn-zj-mB6" kind="relationship" relationship="rootViewController" id="9Qu-0S-Pwg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2y-tl-BTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910" y="-549"/>
+        </scene>
+        <!--Chat Bot Menu View Controller-->
+        <scene sceneID="cfI-pK-HrK">
+            <objects>
+                <viewController id="xkn-zj-mB6" customClass="ChatBotMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBg-1e-4LW"/>
+                        <viewControllerLayoutGuide type="bottom" id="wOx-HA-phu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOs-84-etw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-iO-OQS">
+                                <rect key="frame" x="70" y="161" width="177" height="164"/>
+                                <state key="normal" title="Button" image="knowledge_bot_icon"/>
+                                <connections>
+                                    <action selector="knowledgeBotSegue:" destination="xkn-zj-mB6" eventType="touchUpInside" id="bbK-f8-Jbs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-TH-ui0">
+                                <rect key="frame" x="101" y="374" width="115" height="115"/>
+                                <state key="normal" title="Button" image="medical_bot_icon"/>
+                                <connections>
+                                    <action selector="medicalBotSegue:" destination="xkn-zj-mB6" eventType="touchUpInside" id="vxG-Ii-DzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bd1-bi-KEw"/>
+                    <connections>
+                        <segue destination="hya-jl-3j4" kind="presentation" identifier="medicalBotSegue" id="E6P-c8-SSu"/>
+                        <segue destination="EaR-bg-uYg" kind="presentation" identifier="knowledgeBotSegue" id="3Sb-7p-qmj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDb-KX-6Au" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="-549"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="2Gd-bA-Zs3">
+            <objects>
+                <viewController id="EaR-bg-uYg" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="haC-YU-jny"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Gf-1h-sPe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Q4-cf-1dY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bzG-IR-wCJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnF-9U-INE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="-815"/>
+        </scene>
+        <!--Health Chat Bot View Controller-->
+        <scene sceneID="o3w-9T-6bO">
+            <objects>
+                <viewController id="hya-jl-3j4" customClass="HealthChatBotViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C63-04-Z56"/>
+                        <viewControllerLayoutGuide type="bottom" id="83m-LQ-E1q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EIE-Jf-zfV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOH-T7-3ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="knowledge_bot_icon" width="550" height="550"/>
+        <image name="medical_bot_icon" width="256" height="256"/>
+    </resources>
+</document>

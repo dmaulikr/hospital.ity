@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21206B5C1D38FC5A007095CB /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21206B5B1D38FC5A007095CB /* ChatCell.m */; };
+		21ACB7851D7BEF06003CA94D /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACB7841D7BEF06003CA94D /* CDHelper.swift */; };
+		21ACB78A1D8272EF003CA94D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB7891D8272EE003CA94D /* AVFoundation.framework */; };
+		21ACB78C1D8272F7003CA94D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB78B1D8272F7003CA94D /* AudioToolbox.framework */; };
+		21ACB78E1D827300003CA94D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB78D1D827300003CA94D /* Accelerate.framework */; };
+		21ACB7901D827352003CA94D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB78F1D827352003CA94D /* libc++.tbd */; };
+		21ACB7921D82735A003CA94D /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB7911D82735A003CA94D /* libz.1.2.5.tbd */; };
+		21ACB7A61D83A69B003CA94D /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ACB7A41D83A69B003CA94D /* XMLReader.m */; };
+		21D045921D84B716003BA862 /* HumanConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D045911D84B716003BA862 /* HumanConnectViewController.m */; };
+		21D0459B1D84BC82003BA862 /* HealthChatBotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0459A1D84BC82003BA862 /* HealthChatBotViewController.m */; };
+		21D0459E1D84FDFB003BA862 /* ChatBotMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D0459D1D84FDFB003BA862 /* ChatBotMenuViewController.m */; };
+		21FDF3431D2F018500FCC5A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF3421D2F018500FCC5A2 /* main.m */; };
+		21FDF3461D2F018500FCC5A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF3451D2F018500FCC5A2 /* AppDelegate.m */; };
+		21FDF3491D2F018500FCC5A2 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF3481D2F018500FCC5A2 /* ChatViewController.m */; };
+		21FDF34C1D2F018500FCC5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FDF34A1D2F018500FCC5A2 /* Main.storyboard */; };
+		21FDF34E1D2F018500FCC5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21FDF34D1D2F018500FCC5A2 /* Assets.xcassets */; };
+		21FDF3511D2F018500FCC5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FDF34F1D2F018500FCC5A2 /* LaunchScreen.storyboard */; };
+		21FDF35C1D2F018500FCC5A2 /* Sports_Travel_MeetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF35B1D2F018500FCC5A2 /* Sports_Travel_MeetTests.m */; };
+		21FDF3671D2F018500FCC5A2 /* Sports_Travel_MeetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF3661D2F018500FCC5A2 /* Sports_Travel_MeetUITests.m */; };
+		21FDF3781D38D82000FCC5A2 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF3771D38D82000FCC5A2 /* Message.m */; };
+		DA8F5479CD1484994708219B /* libPods-Sports_Travel_Meet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21AC4852084A6A91D2CED313 /* libPods-Sports_Travel_Meet.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21FDF3581D2F018500FCC5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21FDF3361D2F018500FCC5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21FDF33D1D2F018500FCC5A2;
+			remoteInfo = Sports_Travel_Meet;
+		};
+		21FDF3631D2F018500FCC5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21FDF3361D2F018500FCC5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21FDF33D1D2F018500FCC5A2;
+			remoteInfo = Sports_Travel_Meet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21206B5A1D38FC5A007095CB /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		21206B5B1D38FC5A007095CB /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		21AC4852084A6A91D2CED313 /* libPods-Sports_Travel_Meet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sports_Travel_Meet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21ACB7831D7BEF05003CA94D /* Sports_Travel_Meet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sports_Travel_Meet-Bridging-Header.h"; sourceTree = "<group>"; };
+		21ACB7841D7BEF06003CA94D /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
+		21ACB7891D8272EE003CA94D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		21ACB78B1D8272F7003CA94D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		21ACB78D1D827300003CA94D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		21ACB78F1D827352003CA94D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		21ACB7911D82735A003CA94D /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		21ACB7A31D83A69B003CA94D /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		21ACB7A41D83A69B003CA94D /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		21D045901D84B716003BA862 /* HumanConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanConnectViewController.h; sourceTree = "<group>"; };
+		21D045911D84B716003BA862 /* HumanConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanConnectViewController.m; sourceTree = "<group>"; };
+		21D045991D84BC82003BA862 /* HealthChatBotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthChatBotViewController.h; sourceTree = "<group>"; };
+		21D0459A1D84BC82003BA862 /* HealthChatBotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthChatBotViewController.m; sourceTree = "<group>"; };
+		21D0459C1D84FDFB003BA862 /* ChatBotMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBotMenuViewController.h; sourceTree = "<group>"; };
+		21D0459D1D84FDFB003BA862 /* ChatBotMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBotMenuViewController.m; sourceTree = "<group>"; };
+		21FDF33E1D2F018500FCC5A2 /* Sports_Travel_Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sports_Travel_Meet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FDF3421D2F018500FCC5A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21FDF3441D2F018500FCC5A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21FDF3451D2F018500FCC5A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21FDF3471D2F018500FCC5A2 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		21FDF3481D2F018500FCC5A2 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		21FDF34B1D2F018500FCC5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21FDF34D1D2F018500FCC5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21FDF3501D2F018500FCC5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21FDF3521D2F018500FCC5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FDF3571D2F018500FCC5A2 /* Sports_Travel_MeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sports_Travel_MeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FDF35B1D2F018500FCC5A2 /* Sports_Travel_MeetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sports_Travel_MeetTests.m; sourceTree = "<group>"; };
+		21FDF35D1D2F018500FCC5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FDF3621D2F018500FCC5A2 /* Sports_Travel_MeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sports_Travel_MeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FDF3661D2F018500FCC5A2 /* Sports_Travel_MeetUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sports_Travel_MeetUITests.m; sourceTree = "<group>"; };
+		21FDF3681D2F018500FCC5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21FDF3761D38D82000FCC5A2 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		21FDF3771D38D82000FCC5A2 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		2C2A00B6107CAA6499146519 /* Pods-Sports_Travel_Meet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports_Travel_Meet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sports_Travel_Meet/Pods-Sports_Travel_Meet.release.xcconfig"; sourceTree = "<group>"; };
+		ADEDD8ABB8800CE42B2C2232 /* Pods-Sports_Travel_Meet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sports_Travel_Meet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sports_Travel_Meet/Pods-Sports_Travel_Meet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21FDF33B1D2F018500FCC5A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21ACB78A1D8272EF003CA94D /* AVFoundation.framework in Frameworks */,
+				21ACB78C1D8272F7003CA94D /* AudioToolbox.framework in Frameworks */,
+				21ACB78E1D827300003CA94D /* Accelerate.framework in Frameworks */,
+				21ACB7921D82735A003CA94D /* libz.1.2.5.tbd in Frameworks */,
+				21ACB7901D827352003CA94D /* libc++.tbd in Frameworks */,
+				DA8F5479CD1484994708219B /* libPods-Sports_Travel_Meet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF3541D2F018500FCC5A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF35F1D2F018500FCC5A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21ACB7A51D83A69B003CA94D /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				21ACB7A31D83A69B003CA94D /* XMLReader.h */,
+				21ACB7A41D83A69B003CA94D /* XMLReader.m */,
+			);
+			name = XMLParser;
+			path = "../../CipherPad_iOS/MyScript App";
+			sourceTree = "<group>";
+		};
+		21D0458F1D84B716003BA862 /* HumanAPI */ = {
+			isa = PBXGroup;
+			children = (
+				21D045901D84B716003BA862 /* HumanConnectViewController.h */,
+				21D045911D84B716003BA862 /* HumanConnectViewController.m */,
+			);
+			path = HumanAPI;
+			sourceTree = "<group>";
+		};
+		21FDF3351D2F018500FCC5A2 = {
+			isa = PBXGroup;
+			children = (
+				21FDF3401D2F018500FCC5A2 /* Sports_Travel_Meet */,
+				21FDF35A1D2F018500FCC5A2 /* Sports_Travel_MeetTests */,
+				21FDF3651D2F018500FCC5A2 /* Sports_Travel_MeetUITests */,
+				21FDF33F1D2F018500FCC5A2 /* Products */,
+				252AEE592ACEA54626CE70A1 /* Pods */,
+				571D1E8305E2A02BB39D6BE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		21FDF33F1D2F018500FCC5A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21FDF33E1D2F018500FCC5A2 /* Sports_Travel_Meet.app */,
+				21FDF3571D2F018500FCC5A2 /* Sports_Travel_MeetTests.xctest */,
+				21FDF3621D2F018500FCC5A2 /* Sports_Travel_MeetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21FDF3401D2F018500FCC5A2 /* Sports_Travel_Meet */ = {
+			isa = PBXGroup;
+			children = (
+				21D0458F1D84B716003BA862 /* HumanAPI */,
+				21ACB7A51D83A69B003CA94D /* XMLParser */,
+				21FDF3441D2F018500FCC5A2 /* AppDelegate.h */,
+				21FDF3451D2F018500FCC5A2 /* AppDelegate.m */,
+				21ACB7841D7BEF06003CA94D /* CDHelper.swift */,
+				21D0459C1D84FDFB003BA862 /* ChatBotMenuViewController.h */,
+				21D0459D1D84FDFB003BA862 /* ChatBotMenuViewController.m */,
+				21D045991D84BC82003BA862 /* HealthChatBotViewController.h */,
+				21D0459A1D84BC82003BA862 /* HealthChatBotViewController.m */,
+				21FDF3471D2F018500FCC5A2 /* ChatViewController.h */,
+				21FDF3481D2F018500FCC5A2 /* ChatViewController.m */,
+				21206B5A1D38FC5A007095CB /* ChatCell.h */,
+				21206B5B1D38FC5A007095CB /* ChatCell.m */,
+				21FDF3761D38D82000FCC5A2 /* Message.h */,
+				21FDF3771D38D82000FCC5A2 /* Message.m */,
+				21FDF34A1D2F018500FCC5A2 /* Main.storyboard */,
+				21FDF34D1D2F018500FCC5A2 /* Assets.xcassets */,
+				21FDF34F1D2F018500FCC5A2 /* LaunchScreen.storyboard */,
+				21FDF3521D2F018500FCC5A2 /* Info.plist */,
+				21FDF3411D2F018500FCC5A2 /* Supporting Files */,
+				21ACB7831D7BEF05003CA94D /* Sports_Travel_Meet-Bridging-Header.h */,
+			);
+			path = Sports_Travel_Meet;
+			sourceTree = "<group>";
+		};
+		21FDF3411D2F018500FCC5A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21FDF3421D2F018500FCC5A2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21FDF35A1D2F018500FCC5A2 /* Sports_Travel_MeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				21FDF35B1D2F018500FCC5A2 /* Sports_Travel_MeetTests.m */,
+				21FDF35D1D2F018500FCC5A2 /* Info.plist */,
+			);
+			path = Sports_Travel_MeetTests;
+			sourceTree = "<group>";
+		};
+		21FDF3651D2F018500FCC5A2 /* Sports_Travel_MeetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21FDF3661D2F018500FCC5A2 /* Sports_Travel_MeetUITests.m */,
+				21FDF3681D2F018500FCC5A2 /* Info.plist */,
+			);
+			path = Sports_Travel_MeetUITests;
+			sourceTree = "<group>";
+		};
+		252AEE592ACEA54626CE70A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDD8ABB8800CE42B2C2232 /* Pods-Sports_Travel_Meet.debug.xcconfig */,
+				2C2A00B6107CAA6499146519 /* Pods-Sports_Travel_Meet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		571D1E8305E2A02BB39D6BE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21ACB7911D82735A003CA94D /* libz.1.2.5.tbd */,
+				21ACB78F1D827352003CA94D /* libc++.tbd */,
+				21ACB78D1D827300003CA94D /* Accelerate.framework */,
+				21ACB78B1D8272F7003CA94D /* AudioToolbox.framework */,
+				21ACB7891D8272EE003CA94D /* AVFoundation.framework */,
+				21AC4852084A6A91D2CED313 /* libPods-Sports_Travel_Meet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21FDF33D1D2F018500FCC5A2 /* Sports_Travel_Meet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FDF36B1D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_Meet" */;
+			buildPhases = (
+				7F7E284D9E6B9204FA349527 /* Check Pods Manifest.lock */,
+				21FDF33A1D2F018500FCC5A2 /* Sources */,
+				21FDF33B1D2F018500FCC5A2 /* Frameworks */,
+				21FDF33C1D2F018500FCC5A2 /* Resources */,
+				565504645EE2E8C2DB8F3C19 /* Embed Pods Frameworks */,
+				12E87803623F2397330F5837 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sports_Travel_Meet;
+			productName = Sports_Travel_Meet;
+			productReference = 21FDF33E1D2F018500FCC5A2 /* Sports_Travel_Meet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21FDF3561D2F018500FCC5A2 /* Sports_Travel_MeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FDF36E1D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_MeetTests" */;
+			buildPhases = (
+				21FDF3531D2F018500FCC5A2 /* Sources */,
+				21FDF3541D2F018500FCC5A2 /* Frameworks */,
+				21FDF3551D2F018500FCC5A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21FDF3591D2F018500FCC5A2 /* PBXTargetDependency */,
+			);
+			name = Sports_Travel_MeetTests;
+			productName = Sports_Travel_MeetTests;
+			productReference = 21FDF3571D2F018500FCC5A2 /* Sports_Travel_MeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21FDF3611D2F018500FCC5A2 /* Sports_Travel_MeetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FDF3711D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_MeetUITests" */;
+			buildPhases = (
+				21FDF35E1D2F018500FCC5A2 /* Sources */,
+				21FDF35F1D2F018500FCC5A2 /* Frameworks */,
+				21FDF3601D2F018500FCC5A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21FDF3641D2F018500FCC5A2 /* PBXTargetDependency */,
+			);
+			name = Sports_Travel_MeetUITests;
+			productName = Sports_Travel_MeetUITests;
+			productReference = 21FDF3621D2F018500FCC5A2 /* Sports_Travel_MeetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21FDF3361D2F018500FCC5A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nishanth Salinamakki";
+				TargetAttributes = {
+					21FDF33D1D2F018500FCC5A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					21FDF3561D2F018500FCC5A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 21FDF33D1D2F018500FCC5A2;
+					};
+					21FDF3611D2F018500FCC5A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 21FDF33D1D2F018500FCC5A2;
+					};
+				};
+			};
+			buildConfigurationList = 21FDF3391D2F018500FCC5A2 /* Build configuration list for PBXProject "Sports_Travel_Meet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21FDF3351D2F018500FCC5A2;
+			productRefGroup = 21FDF33F1D2F018500FCC5A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21FDF33D1D2F018500FCC5A2 /* Sports_Travel_Meet */,
+				21FDF3561D2F018500FCC5A2 /* Sports_Travel_MeetTests */,
+				21FDF3611D2F018500FCC5A2 /* Sports_Travel_MeetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21FDF33C1D2F018500FCC5A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FDF3511D2F018500FCC5A2 /* LaunchScreen.storyboard in Resources */,
+				21FDF34E1D2F018500FCC5A2 /* Assets.xcassets in Resources */,
+				21FDF34C1D2F018500FCC5A2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF3551D2F018500FCC5A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF3601D2F018500FCC5A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12E87803623F2397330F5837 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sports_Travel_Meet/Pods-Sports_Travel_Meet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		565504645EE2E8C2DB8F3C19 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sports_Travel_Meet/Pods-Sports_Travel_Meet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7E284D9E6B9204FA349527 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21FDF33A1D2F018500FCC5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FDF3491D2F018500FCC5A2 /* ChatViewController.m in Sources */,
+				21D0459E1D84FDFB003BA862 /* ChatBotMenuViewController.m in Sources */,
+				21D045921D84B716003BA862 /* HumanConnectViewController.m in Sources */,
+				21FDF3781D38D82000FCC5A2 /* Message.m in Sources */,
+				21ACB7851D7BEF06003CA94D /* CDHelper.swift in Sources */,
+				21FDF3461D2F018500FCC5A2 /* AppDelegate.m in Sources */,
+				21206B5C1D38FC5A007095CB /* ChatCell.m in Sources */,
+				21FDF3431D2F018500FCC5A2 /* main.m in Sources */,
+				21D0459B1D84BC82003BA862 /* HealthChatBotViewController.m in Sources */,
+				21ACB7A61D83A69B003CA94D /* XMLReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF3531D2F018500FCC5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FDF35C1D2F018500FCC5A2 /* Sports_Travel_MeetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21FDF35E1D2F018500FCC5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21FDF3671D2F018500FCC5A2 /* Sports_Travel_MeetUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21FDF3591D2F018500FCC5A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21FDF33D1D2F018500FCC5A2 /* Sports_Travel_Meet */;
+			targetProxy = 21FDF3581D2F018500FCC5A2 /* PBXContainerItemProxy */;
+		};
+		21FDF3641D2F018500FCC5A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21FDF33D1D2F018500FCC5A2 /* Sports_Travel_Meet */;
+			targetProxy = 21FDF3631D2F018500FCC5A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21FDF34A1D2F018500FCC5A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21FDF34B1D2F018500FCC5A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21FDF34F1D2F018500FCC5A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21FDF3501D2F018500FCC5A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21FDF3691D2F018500FCC5A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		21FDF36A1D2F018500FCC5A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21FDF36C1D2F018500FCC5A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADEDD8ABB8800CE42B2C2232 /* Pods-Sports_Travel_Meet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Sports_Travel_Meet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-Meet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sports_Travel_Meet/Sports_Travel_Meet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21FDF36D1D2F018500FCC5A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C2A00B6107CAA6499146519 /* Pods-Sports_Travel_Meet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Sports_Travel_Meet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-Meet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sports_Travel_Meet/Sports_Travel_Meet-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		21FDF36F1D2F018500FCC5A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Sports_Travel_MeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-MeetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports_Travel_Meet.app/Sports_Travel_Meet";
+			};
+			name = Debug;
+		};
+		21FDF3701D2F018500FCC5A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Sports_Travel_MeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-MeetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports_Travel_Meet.app/Sports_Travel_Meet";
+			};
+			name = Release;
+		};
+		21FDF3721D2F018500FCC5A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Sports_Travel_MeetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-MeetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sports_Travel_Meet;
+			};
+			name = Debug;
+		};
+		21FDF3731D2F018500FCC5A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Sports_Travel_MeetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NS.Sports-Travel-MeetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sports_Travel_Meet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21FDF3391D2F018500FCC5A2 /* Build configuration list for PBXProject "Sports_Travel_Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FDF3691D2F018500FCC5A2 /* Debug */,
+				21FDF36A1D2F018500FCC5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FDF36B1D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FDF36C1D2F018500FCC5A2 /* Debug */,
+				21FDF36D1D2F018500FCC5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FDF36E1D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_MeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FDF36F1D2F018500FCC5A2 /* Debug */,
+				21FDF3701D2F018500FCC5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21FDF3711D2F018500FCC5A2 /* Build configuration list for PBXNativeTarget "Sports_Travel_MeetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21FDF3721D2F018500FCC5A2 /* Debug */,
+				21FDF3731D2F018500FCC5A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21FDF3361D2F018500FCC5A2 /* Project object */;
+}
