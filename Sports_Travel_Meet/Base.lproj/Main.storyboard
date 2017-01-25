@@ -34,17 +34,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-iO-OQS">
-                                <rect key="frame" x="70" y="161" width="177" height="164"/>
+                                <rect key="frame" x="70" y="95" width="177" height="164"/>
                                 <state key="normal" title="Button" image="knowledge_bot_icon"/>
                                 <connections>
                                     <action selector="knowledgeBotSegue:" destination="xkn-zj-mB6" eventType="touchUpInside" id="bbK-f8-Jbs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKp-TH-ui0">
-                                <rect key="frame" x="101" y="374" width="115" height="115"/>
+                                <rect key="frame" x="101" y="273" width="115" height="115"/>
                                 <state key="normal" title="Button" image="medical_bot_icon"/>
                                 <connections>
                                     <action selector="medicalBotSegue:" destination="xkn-zj-mB6" eventType="touchUpInside" id="vxG-Ii-DzT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-c9-ZUB">
+                                <rect key="frame" x="103" y="441" width="113" height="117"/>
+                                <state key="normal" title="Button" image="whatsapp_icon"/>
+                                <connections>
+                                    <segue destination="7Nk-aQ-UTg" kind="presentation" id="4ca-hd-Sr5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,6 +66,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDb-KX-6Au" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-177" y="-549"/>
+        </scene>
+        <!--Phone Chat View Controller-->
+        <scene sceneID="Yp6-0p-aNN">
+            <objects>
+                <viewController id="7Nk-aQ-UTg" customClass="PhoneChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ria-Uf-Vh7"/>
+                        <viewControllerLayoutGuide type="bottom" id="GVy-jd-r74"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JEq-is-mpY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l11-ZM-Qqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="172"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="2Gd-bA-Zs3">
@@ -101,5 +126,6 @@
     <resources>
         <image name="knowledge_bot_icon" width="550" height="550"/>
         <image name="medical_bot_icon" width="256" height="256"/>
+        <image name="whatsapp_icon" width="362" height="372"/>
     </resources>
 </document>

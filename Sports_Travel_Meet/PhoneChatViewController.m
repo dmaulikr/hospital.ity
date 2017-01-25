@@ -1,16 +1,16 @@
 //
-//  HealthChatBotViewController.m
+//  PhoneChatViewController.m
 //  Sports_Travel_Meet
 //
-//  Created by Nishanth Salinamakki on 9/10/16.
+//  Created by Nishanth Salinamakki on 10/29/16.
 //  Copyright © 2016 Nishanth Salinamakki. All rights reserved.
 //
 
-#import "HealthChatBotViewController.h"
+#import "PhoneChatViewController.h"
 #import "Message.h"
 #import "ChatCell.h"
 
-@interface HealthChatBotViewController ()
+@interface PhoneChatViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UITextView *messageField;
@@ -19,38 +19,32 @@
 @property (strong, nonatomic) NSMutableDictionary *sections;
 @property (strong, nonatomic) NSMutableArray *dates;
 
-@property (strong, nonatomic) NSString *humanAPIOutput;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 
 @end
 
-@implementation HealthChatBotViewController
+@implementation PhoneChatViewController
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
     
-    UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    UINavigationBar *navbar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     [self.view addSubview: navbar];
     [self.navigationItem setTitle: @"OmniBot"];
     
     BOOL localIncoming = YES;
     
-    //Set up Wit.AI
-    [Wit sharedInstance].delegate = self;
-    self.medWit = [[Wit alloc] init];
-    
     self.messages = [[NSMutableArray alloc] init];
     self.sections = [[NSMutableDictionary alloc] init];
     self.dates = [[NSMutableArray alloc] init];
-    
-    self.humanAPIOutput = @"";
     
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970: 1100000000];
     
     //Adding dummy data
     //*******************************************************
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 3; i++) {
         Message *m = [[Message alloc] init];
-        m.messageText = @"SAMPLE MESSAGES";
+        m.messageText = @"SAMPLE MESSAGE!";
         m.incoming = localIncoming;
         m.timeStamp = date;
         localIncoming = !localIncoming;
@@ -91,6 +85,7 @@
     [attachPhotoButton setImage: [self resizeImage: [UIImage imageNamed: @"camera_icon.png"] andWidth: 35 andHeight: 35] forState: UIControlStateNormal];
     [attachPhotoButton setContentHuggingPriority: 251 forAxis: UILayoutConstraintAxisHorizontal];
     [attachPhotoButton setContentCompressionResistancePriority: 751 forAxis: UILayoutConstraintAxisHorizontal];
+    [attachPhotoButton addTarget: self action: @selector(pressAttachPhotoButton) forControlEvents: UIControlEventTouchUpInside];
     
     self.bottomConstraint = [[NSLayoutConstraint alloc] init];
     self.bottomConstraint = [newMessageArea.bottomAnchor constraintEqualToAnchor: self.view.bottomAnchor];
@@ -129,6 +124,9 @@
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action:@selector(handleSingleTap:)];
     tapRecognizer.numberOfTapsRequired = 1;
     [self.view addGestureRecognizer: tapRecognizer];
+    
+    NSLog(@"DICTIONARY: %@", self.sections);
+    
 }
 
 - (void) scrollToBottom {
@@ -179,84 +177,6 @@
     return bubbleViewImage;
 }
 
-#pragma mark - Queries to Human API
-- (void) getHumanAPIData: (NSString *) witIntent {
-    //Accessing demo data provided by Human API
-    NSString *encodedWitIntent = [witIntent stringByAppendingString: @"?access_token=demo"];
-    NSURL *humanAPIURL;
-    if ([[witIntent lowercaseString] containsString: @"body"] || [[witIntent lowercaseString] containsString: @"bmi"] || [[witIntent lowercaseString] containsString: @"blood_oxygen"] || [[witIntent lowercaseString] containsString: @"blood_glucose"] || [[witIntent lowercaseString] containsString: @"weight"] || [[witIntent lowercaseString] containsString: @"height"] || [[witIntent lowercaseString] containsString: @"activities"]) {
-        humanAPIURL = [NSURL URLWithString: [@"https://api.humanapi.co/v1/human/" stringByAppendingString: encodedWitIntent]];
-    }
-    else if ([[witIntent lowercaseString] containsString: @"meal"]) {
-        humanAPIURL = [NSURL URLWithString: [@"https://api.humanapi.co/v1/human/food/" stringByAppendingString: encodedWitIntent]];
-        NSLog(@"EXECUTING MEALS URL");
-    }
-    else if ([[witIntent lowercaseString] containsString: @"allergies"] || [[witIntent lowercaseString] containsString: @"encounters"] || [[witIntent lowercaseString] containsString: @"immunizations"] || [[witIntent lowercaseString] containsString: @"medications"]) {
-        humanAPIURL = [NSURL URLWithString: [@"https://api.humanapi.co/v1/human/medical/" stringByAppendingString: encodedWitIntent]];
-    }
-    NSLog(@"URL STRING: %@", humanAPIURL.absoluteString);
-    NSURLRequest *humanAPIRequest = [NSURLRequest requestWithURL: humanAPIURL];
-    
-    [NSURLConnection sendAsynchronousRequest: humanAPIRequest queue: [NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-        NSError *error = nil;
-        NSDictionary *dataJSON = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingAllowFragments error: &error];
-        //NSDictionary *dataJSON = (NSDictionary*) [NSKeyedUnarchiver unarchiveObjectWithData: data];
-        
-        //Add underscores b/w spaces later
-        if ([[witIntent lowercaseString] isEqualToString: @"body_fat"] ||
-            [[witIntent lowercaseString] isEqualToString: @"bmi"] ||
-            [[witIntent lowercaseString] isEqualToString: @"blood_oxygen"] ||
-            [[witIntent lowercaseString] isEqualToString: @"blood_glucose"] ||
-            [[witIntent lowercaseString] isEqualToString: @"weight"] ||
-            [[witIntent lowercaseString] isEqualToString: @"height"] ||
-            [[witIntent lowercaseString] isEqualToString: @"activities"]) {
-            NSLog(@"WIT INTENT CONDITION SATISFIED!");
-            NSLog(@"PARTS: %@ %@", dataJSON[@"value"], dataJSON[@"unit"]);
-            self.humanAPIOutput = [[dataJSON[@"value"] stringValue] stringByAppendingString: dataJSON[@"unit"]];
-            //[[self.humanAPIOutput stringByAppendingString: dataJSON[@"value"]] stringByAppendingString: dataJSON[@"unit"]];
-            NSString *prefix = [[@"Your " stringByAppendingString: witIntent] stringByAppendingString: @" is "];
-            [self addBotMessage: [prefix stringByAppendingString: self.humanAPIOutput]];
-        }
-        else if ([[witIntent lowercaseString] containsString: @"meal"]) {
-            NSLog(@"WIT INTENT IS MEAL!");
-            NSLog(@"MEAL DATA JSON: %@", dataJSON);
-            
-        }
-        else if ([[witIntent lowercaseString] containsString: @"allergies"] || [[witIntent lowercaseString] containsString: @"immunizations"] || [[witIntent lowercaseString] containsString: @"medications"]) {
-            NSLog(@"MEDICAL JSON: %@", dataJSON);
-            NSError *e = nil;
-            NSArray *JSONarray = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
-            for(int i=0;i<[JSONarray count];i++)
-            {
-                NSLog(@"ID: %@",[[JSONarray objectAtIndex:i] objectForKey:@"id"]);
-                NSLog(@"NAME: %@",[[JSONarray objectAtIndex:i] objectForKey:@"name"]);
-                [self addBotMessage: [[JSONarray objectAtIndex: i] objectForKey: @"name"]];
-            }
-        }
-        else if ([[witIntent lowercaseString] containsString: @"encounters"]) {
-            NSLog(@"DOCTOR VISIT JSON: %@", dataJSON);
-            NSError *e = nil;
-            NSArray *JSONarray = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
-            for(int i=0;i<[JSONarray count];i++)
-            {
-                NSLog(@"ID: %@",[[JSONarray objectAtIndex:i] objectForKey:@"id"]);
-                NSLog(@"NAME: %@",[[JSONarray objectAtIndex:i] objectForKey:@"visitType"]);
-                NSString *messageText = [[JSONarray objectAtIndex: i] objectForKey: @"visitType"];
-                NSString *secondMessageText = [[[JSONarray objectAtIndex: i] objectForKey: @"dateTime"] substringWithRange: NSMakeRange(0, 10)];
-                NSArray *infoArray = [[NSArray alloc] initWithObjects: messageText, secondMessageText, nil];
-                NSString *joinedString = [infoArray componentsJoinedByString:@"\n"];
-                [self addBotMessage: joinedString];
-            }
-        }
-    }];
-    //[self addBotMessage: self.humanAPIOutput];
-    
-}
-
-- (void)witDidGraspIntent:(NSArray *)outcomes messageId:(NSString *)messageId customData:(id) customData error:(NSError*)e {
-    NSLog(@"OUTCOMES: %@", outcomes);
-}
-
 - (void) pressSendButton: (UIButton *) button {
     if (self.messageField.text.length > 0) {
         Message *newMessage = [[Message alloc] init];
@@ -264,51 +184,69 @@
         NSLog(@"MESSAGE TEXT: %@", self.messageField.text);
         newMessage.timeStamp = [NSDate date];
         newMessage.incoming = NO;
-        /*
-         UIImage *samplePic = [UIImage imageNamed: @"wit.png"];
-         //[self resizeImage: samplePic];
-         newMessage.messagePic = [self resizeImage: samplePic andWidth: samplePic.size.width/2 andHeight: samplePic.size.height/2];
-         */
-        [self addMessage: newMessage];//[self.messages addObject: newMessage];
+        
+        [self addMessage: newMessage];
+        //[self.messages addObject: newMessage];
         
         [self.tableView reloadData];
         [self scrollToBottom];
         [self.view endEditing: YES];
         
-        NSString* encodedUrl = [newMessage.messageText stringByAddingPercentEscapesUsingEncoding:
-                                NSUTF8StringEncoding];
-        
-        NSString *urlString = [NSString stringWithFormat:@"https://api.wit.ai/message?q=%@", encodedUrl];
-        NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString: urlString]];
-        [req setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
-        [req setTimeoutInterval:15.0];
-        [req setValue:[NSString stringWithFormat: @"Bearer %@", self.medWit.accessToken] forHTTPHeaderField:@"Authorization"];
-        [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        
-        [NSURLConnection sendAsynchronousRequest: req queue: [NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-            NSLog(@"URL STRING: %@", urlString);
-            NSError *serializationError;
-            NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data
-                                                                   options:0
-                                                                     error:&serializationError];
-            NSLog(@"WIT.AI DATA: %@", object);
-            NSString *witIntent = object[@"entities"][@"intent"][0][@"value"];
-            NSLog(@"WIT.AI INTENT: %@", witIntent);
-            //if ([witIntent containsString: @"height"] || [witIntent containsString: @"weight"] || [witIntent containsString: @"bmi"] || [witIntent containsString: @"body"] || [witIntent containsString: @"blood"]) {
-                [self getHumanAPIData: object[@"entities"][@"intent"][0][@"value"]];
-            //}
-            
-        }];
-        
-        //[self getHumanAPIData: witIntent];
         [self.messageField setText: @""];
-        
-        //Temporary -- get Wit.AI intent here
-        //[self.medWit interpretString: newMessage.messageText customData: nil withBlock: ^(NSString *intent) {
-        //[self getHumanAPIData: intent];
-        //NSLog(@"INTENT PARAMETER: %@", intent);
-        //}];
     }
+    else {
+        Message *newMessage = [[Message alloc] init];
+        newMessage.messageText = self.messageField.text;
+        NSLog(@"MESSAGE TEXT: %@", self.messageField.text);
+        newMessage.timeStamp = [NSDate date];
+        newMessage.incoming = NO;
+        UIImage *samplePic = [UIImage imageNamed: @"wit.png"];
+        //[self resizeImage: samplePic];
+        newMessage.messagePic = [self resizeImage: samplePic andWidth: 50 andHeight: 50];
+        [self addMessage: newMessage];
+        
+        [self.tableView reloadData];
+        [self scrollToBottom];
+        [self.view endEditing: YES];
+    }
+}
+
+//Enable user to take photo right away instead of simply selecting
+- (void) pressAttachPhotoButton {
+    self.imagePicker = [[UIImagePickerController alloc] init];
+    [self.imagePicker setDelegate: self];
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController: self.imagePicker animated:YES completion:nil];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    UIImage *selectedImage = [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    Message *newMessage = [[Message alloc] init];
+    newMessage.messageText = @"";
+    newMessage.timeStamp = [NSDate date];
+    newMessage.incoming = NO;
+    newMessage.messagePic = [self resizeImage: selectedImage andWidth: 50 andHeight: 50];
+    [self addMessage: newMessage];
+    
+    [self.tableView reloadData];
+    [self scrollToBottom];
+    [self.view endEditing: YES];
+    
+    /*
+     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+     [request setURL:[NSURL URLWithString:@"http://usekenko.co/food-analysis"]];
+     [request setHTTPMethod:@"POST"];
+     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+     [request setHTTPBody:postData];
+     */
+    
+    [self.imagePicker dismissModalViewControllerAnimated:YES];
+    
 }
 
 - (void) addMessage: (Message *) message {
@@ -325,20 +263,6 @@
         self.sections[startDay] = messages;
     }
     NSLog(@"ADDED");
-}
-
-- (void) addBotMessage: (NSString *) text {
-    NSLog(@"ADD BOT MESSAGE 1");
-    Message *botMessage = [[Message alloc] init];
-    botMessage.messageText = text;
-    //botMessage.messagePic = [UIImage imageNamed: @"wit.png"];
-    botMessage.incoming = YES;
-    NSDate *whateverdate = [NSDate date];
-    botMessage.timeStamp = whateverdate;
-    [self addMessage: botMessage];
-    
-    [self.tableView reloadData];
-    [self scrollToBottom];
 }
 
 - (NSMutableArray*) getMessages: (int) section {
@@ -424,56 +348,3 @@
 }
 
 @end
-
-
-
-
-
-//**************************************************************************************
-/*
- - (void) postRequest {
- NSURL *url = [NSURL URLWithString: @"https://user.humanapi.co/v1/connect/tokens"];
- NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL: url];
- [urlRequest setHTTPMethod:@"POST"];
- [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
- 
- NSError *error = nil;
- 
- NSDictionary *humanAPIPostJSON = @{
- @"humanId": @"d90582b0b57c328a38f789ce041184c1",
- @"clientId": @"b08d69b2b61b291f7ef312753a3e382fa56b0264",
- @"sessionToken": @"8171d06fdb11d3bfec917b1cac95db9b",
- @"clientSecret": @"723882d73e42b84361ddd63757e4556f212c40bf"
- };
- NSData *humanAPIPostData = [NSJSONSerialization dataWithJSONObject: humanAPIPostJSON options: 0 error: &error];
- [urlRequest setHTTPBody: humanAPIPostData];
- 
- NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
- [[session dataTaskWithRequest: urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
- NSString *requestReply = [[NSString alloc] initWithData: data encoding: NSASCIIStringEncoding];
- NSLog(@"requestReply: %@", requestReply);
- }] resume];
- 
- /*
- [NSURLConnection sendAsynchronousRequest: urlRequest queue: [NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
- NSLog(@"DATA: %@", data);
- NSError *error = nil;
- NSDictionary *humanAPIData = (NSDictionary*) [NSKeyedUnarchiver unarchiveObjectWithData: data];
- NSString *newStr1 = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
- NSLog(@"HUMAN API DATA: %@", newStr1);
- NSLog(@"HUMAN API JSON DATA: %@", humanAPIData);
- }];
- 
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-//********************************************************************************************

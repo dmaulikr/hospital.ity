@@ -1,20 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AD2E8FB4E06A52CD771B72D6A4C532CCE0D73528",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "3C50355AFA2D1E5542A70D7EAA067863E3A446DB" : 0,
-    "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3" : 0
+    "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3" : 0,
+    "AD2E8FB4E06A52CD771B72D6A4C532CCE0D73528" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D48653A9-26A0-44C5-862E-E9D6EC70E47B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "3C50355AFA2D1E5542A70D7EAA067863E3A446DB" : "Xcode%20Projects\/CipherPad_iOS\/",
-    "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3" : "Xcode%20Projects\/"
+    "3C50355AFA2D1E5542A70D7EAA067863E3A446DB" : "CipherPad_iOS\/",
+    "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3" : "",
+    "AD2E8FB4E06A52CD771B72D6A4C532CCE0D73528" : "Sports_Travel_Meet\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Sports_Travel_Meet",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sports_Travel_Meet\/Sports_Travel_Meet.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sports_Travel_Meet.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nishanthrs\/CipherPad-iOS.git",
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nishanthrs\/MyScript-App.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CB855A374F766E883BFF1F0ECB7B4F9FEB9A3F3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nishanthrs\/hospital.ity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD2E8FB4E06A52CD771B72D6A4C532CCE0D73528"
     }
   ]
 }

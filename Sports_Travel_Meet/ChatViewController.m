@@ -68,6 +68,8 @@
             date = [NSDate dateWithTimeInterval: 60 * 60 * 24 sinceDate: date];
         }
     }
+    
+    [self searchGlassdoorAPIDemoMethod];
     //*******************************************************
     
     UIView *newMessageArea = [[UIView alloc] init];
@@ -548,7 +550,7 @@
         self.identifiedPic = query.title;
         NSLog(@"PICTURE: %@", self.identifiedPic);
         [self addBotMessage: self.identifiedPic];
-        //[self nutritionixQuery: @"coffee"];
+        //[self wolframQuery: [@"Nutritional facts of " stringByAppendingString: @"coffee" /*self.identifiedPic*/]];
     }
 }
 
@@ -558,6 +560,28 @@
 
 - (void) cloudSightQueryDidUpdateTag:(CloudSightQuery *)query {
     
+}
+
+- (void) searchGlassdoorAPIDemoMethod {
+    NSURL *glassdoorURL = [NSURL URLWithString: @"http://api.glassdoor.com/api/api.htm?v=1&format=json&t.p=93741&t.k=k52U2sp9v5i&action=employers&q=interviews&pn=3&ps=50&userip=130.126.255.208&useragent=Chrome/%2F4.0"];
+    NSURL *glassdoorURL2 = [NSURL URLWithString: @"http://api.glassdoor.com/api/api.htm?v=1&format=json&t.p=93741&t.k=k52U2sp9v5i&action=employers&q=software&userip=130.126.255.208&useragent=Chrome/%2F4.0"];
+    NSURL *glassdoorRegularURL = [NSURL URLWithString: @"https://www.glassdoor.com/Overview/Working-at-McKinsey-and-Company-EI_IE2893.11,31.htm"];
+    NSURL *linkedInRegularURL = [NSURL URLWithString: @"https://www.linkedin.com/jobs/search?keywords=Software%20Engineering%20intern&location=San%20Francisco%20Bay%20Area&locationId=us:84&trk=jobs_jserp_search_button_execute&searchOrigin=JSERP"];
+    NSURLRequest *request = [NSURLRequest requestWithURL: glassdoorRegularURL];
+    
+    [NSURLConnection sendAsynchronousRequest: request queue: [NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSLog(@"DATA: %@", data);
+        NSError *error = nil;
+        NSDictionary *glassdoorData = [NSJSONSerialization JSONObjectWithData: data
+                                                                        options: NSJSONReadingAllowFragments
+                                                                          error: &error];
+        NSString *glassdoorStringData = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+        NSLog(@"GLASSDOOR DATA: %@", glassdoorData);
+        NSLog(@"GLASSDOOR STRING: %@", glassdoorStringData);
+        for (int i = 0; i < [glassdoorData[@"response"][@"employers"] count]; i++) {
+            NSLog(@"GLASSDOOR SOFTWARE COMPANIES: %@", glassdoorData[@"response"][@"employers"][i][@"name"]);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

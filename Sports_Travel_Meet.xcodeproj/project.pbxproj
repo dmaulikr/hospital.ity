@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21206B5C1D38FC5A007095CB /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21206B5B1D38FC5A007095CB /* ChatCell.m */; };
+		219CE3711DC531C80023DE0A /* PhoneChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219CE3701DC531C80023DE0A /* PhoneChatViewController.m */; };
 		21ACB7851D7BEF06003CA94D /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACB7841D7BEF06003CA94D /* CDHelper.swift */; };
 		21ACB78A1D8272EF003CA94D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB7891D8272EE003CA94D /* AVFoundation.framework */; };
 		21ACB78C1D8272F7003CA94D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ACB78B1D8272F7003CA94D /* AudioToolbox.framework */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		21206B5A1D38FC5A007095CB /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		21206B5B1D38FC5A007095CB /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		219CE36F1DC531C80023DE0A /* PhoneChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneChatViewController.h; sourceTree = "<group>"; };
+		219CE3701DC531C80023DE0A /* PhoneChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneChatViewController.m; sourceTree = "<group>"; };
 		21AC4852084A6A91D2CED313 /* libPods-Sports_Travel_Meet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sports_Travel_Meet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ACB7831D7BEF05003CA94D /* Sports_Travel_Meet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sports_Travel_Meet-Bridging-Header.h"; sourceTree = "<group>"; };
 		21ACB7841D7BEF06003CA94D /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				21D0459A1D84BC82003BA862 /* HealthChatBotViewController.m */,
 				21FDF3471D2F018500FCC5A2 /* ChatViewController.h */,
 				21FDF3481D2F018500FCC5A2 /* ChatViewController.m */,
+				219CE36F1DC531C80023DE0A /* PhoneChatViewController.h */,
+				219CE3701DC531C80023DE0A /* PhoneChatViewController.m */,
 				21206B5A1D38FC5A007095CB /* ChatCell.h */,
 				21206B5B1D38FC5A007095CB /* ChatCell.m */,
 				21FDF3761D38D82000FCC5A2 /* Message.h */,
@@ -419,6 +424,7 @@
 			files = (
 				21FDF3491D2F018500FCC5A2 /* ChatViewController.m in Sources */,
 				21D0459E1D84FDFB003BA862 /* ChatBotMenuViewController.m in Sources */,
+				219CE3711DC531C80023DE0A /* PhoneChatViewController.m in Sources */,
 				21D045921D84B716003BA862 /* HumanConnectViewController.m in Sources */,
 				21FDF3781D38D82000FCC5A2 /* Message.m in Sources */,
 				21ACB7851D7BEF06003CA94D /* CDHelper.swift in Sources */,
